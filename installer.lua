@@ -28,7 +28,6 @@ if true then
         end
         print("Getting all files...")
         for k,v in ipairs(files) do
-            exec("rm /mnt/"..szar..v)
             exec("wget "..url..v.." /mnt/"..szar..v)
         end
         exec("wget "..url.."/bin/sh.lua".." /mnt/"..szar..v)
