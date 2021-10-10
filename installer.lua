@@ -31,6 +31,8 @@ if true then
             exec("wget "..url..v.." /mnt/"..szar..v)
         end
         exec("wget "..url.."/bin/sh.lua".." /mnt/"..szar.."/bin/sh.lua")
+        exec("wget "..url.."/bin/rm.lua".." /mnt/"..szar.."/bin/rm.lua")
+        exec("wget "..url.."/bin/wget.lua".." /mnt/"..szar.."/bin/wget.lua")
         print("OK! Rebooting...")
         exec("reboot")
     else
