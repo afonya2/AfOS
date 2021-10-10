@@ -24,13 +24,19 @@ if ver ~= _OSVERSION then
         print("Installing updates...")
         print("Getting all files...")
         local da = ""
-        for chunk in internet.request(url.."/VERSION.txt") do
-            da = data..chunk
+        for chunk in internet.request(url.."/FILES.txt") do
+            da = da..chunk
         end
-        local files = ser.unserialize(da)
+        local dirs = ser.unserialize(da).folders
+        local files = ser.unserialize(da).files
+        print("Getting all folders...")
+        for k,v in ipairs(dirs) do
+            exec("mkdir "..v)
+        end
         print("Getting all files...")
         for k,v in ipairs(files) do
-            exec("wget "..url..v)
+            exec("rm "..v)
+            exec("wget "..url..v.." "..v)
         end
         print("OK! Rebooting...")
         exec("reboot")
