@@ -1,7 +1,7 @@
 -- called from /init.lua
 local raw_loadfile = ...
 
-_G._OSVERSION = "AfOS 1.8-BETA"
+_G._OSVERSION = "AfOS 1.8.2-BETA"
 
 -- luacheck: globals component computer unicode _OSVERSION
 local component = component
