@@ -8,6 +8,7 @@ io.write("enter target disk first 3 letter of id or none to cancel copy! ")
 local szar = io.read()
 if szar ~= "none" then
     exec("cp /autorun.lua /mnt/"..szar.."/ -r")
+    exec("cp /init.lua /mnt/"..szar.."/ -r")
     exec("cp /bin /mnt/"..szar.."/ -r")
     exec("cp /boot /mnt/"..szar.."/ -r")
     exec("cp /etc /mnt/"..szar.."/ -r")
