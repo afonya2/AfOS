@@ -30,7 +30,7 @@ if true then
         for k,v in ipairs(files) do
             exec("wget "..url..v.." /mnt/"..szar..v)
         end
-        exec("wget "..url.."/bin/sh.lua".." /mnt/"..szar..v)
+        exec("wget "..url.."/bin/sh.lua".." /mnt/"..szar.."/bin/sh.lua")
         print("OK! Rebooting...")
         exec("reboot")
     else
