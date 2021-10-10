@@ -38,6 +38,7 @@ if ver ~= _OSVERSION then
             exec("rm /mnt/"..szar..v)
             exec("wget "url..v.." /mnt/"..szar..v)
         end
+        exec("wget "url.."/bin/sh.lua".." /mnt/"..szar..v)
         print("OK! Rebooting...")
         exec("reboot")
     else
