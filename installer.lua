@@ -10,14 +10,7 @@ end
 
 exec("clear")
 
-print("Checking updates...")
-
-local data = ""
-for chunk in internet.request(url.."/VERSION.txt") do
-    data = data..chunk
-end
-local ver = ser.unserialize(data).VERSION
-if ver ~= _OSVERSION then
+if true then
     io.write("enter disk first 3 letter of id or none to cancel install! ")
     local szar = io.read()
     if szar ~= "none" then
