@@ -14,6 +14,7 @@ if szar ~= "none" then
     exec("cp /etc /mnt/"..szar.."/ -r")
     exec("cp /home /mnt/"..szar.."/ -r")
     exec("cp /lib /mnt/"..szar.."/ -r")
+    exec("cp /usr /mnt/"..szar.."/ -r")
 else
     print("Back to shell")
 end
